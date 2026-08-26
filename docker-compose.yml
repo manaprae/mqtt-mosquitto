@@ -1,0 +1,16 @@
+services:
+  mosquitto:
+    image: eclipse-mosquitto
+    container_name: mosquitto
+    volumes:
+      - ./config:/mosquitto/config
+      - ./data:/mosquitto/data
+      - ./log:/mosquitto/log
+      # edit domain-name and maping correct with mosquitto.conf
+      - /etc/letsencrypt/live/mqtt.esmaserv.com/fullchain.pem:/mosquitto/letsencrypt/fullchain.pem:ro
+      - /etc/letsencrypt/live/mqtt.esmaserv.com/privkey.pem:/mosquitto/letsencrypt/privkey.pem:ro
+    ports:
+      - "1883:1883"   # mqtt
+      - "8883:8883"   # mott over TLS
+        #- "8083:8083"   # Websocket
+    restart: always

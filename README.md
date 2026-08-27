@@ -1,7 +1,7 @@
 # Mqtt-Docker
 ระบบรับส่งข้อความสำหรับอุปกรณ์ IoT ที่ชื่อว่า MQTT Broker (เช่น Eclipse Mosquitto) เพื่อให้ติดตั้งและใช้งานได้ง่าย รบกวนเข้าไปติดตั้ง Docker และ git เพื่อใช้งาน
 
-[install docker and docker compose](https://github.com/manaprae/install_docker)
+[Install docker version ต่างๆ เข้าไปดูได้ที่นี้ ](https://www.docker.com/get-started/)
 
 ## Getting started
 ```bash
